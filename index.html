@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Vortex</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">VORTEX</div>
+  <ul class="nav-links">
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#skills">Навыки</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <h1>VORTEX</h1>
+  <p>Приветствую. Это мой первый сайт портфолио.</p>
+  <p>Воспользуйтесь кнопками навигации сверху чтобы переместиться по сайту.</p>
+  <div class="hero-btns">
+    <a href="#about" class="btn btn-primary">Обо мне</a>
+    <a href="#contact" class="btn btn-ghost">Связаться</a>
+  </div>
+</section>
+
+<div id="bio" class="fade-in">
+  <div class="bio-box">
+    <div class="label">// БИО</div>
+    <p>Меня зовут Егор, мне 17 лет. С детства я интересуюсь компьютерами и различной техникой. В планах связать с этим будущее.<br><br>
+    Я поступил на обучение в Донецкую академию управления и государственной службы. Увлекаться программированием я начал немного раньше поступления (примерно месяц до поступления), заинтересовал меня в основном язык Python. Свой первый код я написал именно на нём. На данный момент я очень интересуюсь изучением исключительно Python.</p>
+  </div>
+</div>
+
+<section id="about" class="fade-in">
+  <h2 class="section-title">Обо мне</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Я разработчик с искренним интересом к технологиям. С детства компьютеры и техника были моей страстью — и в какой-то момент я решил превратить это в своё дело.</p>
+      <p>Сейчас активно изучаю Python.</p>
+    </div>
+    <div class="about-card">
+      <div class="stat">
+        <div class="stat-label">Текущий фокус</div>
+        <div class="stat-value">Python</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Учёба</div>
+        <div class="stat-value" style="font-size:.95rem">ДАУГС</div>
+      </div>
+      <div class="stat" style="margin-bottom:0">
+        <div class="stat-label">Принципы</div>
+        <div class="stat-value" style="font-size:.95rem">Строю · Изучаю · Развиваюсь</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="fade-in">
+  <h2 class="section-title">Навыки</h2>
+  <div class="skills-list" id="skillsGrid">
+    <div class="skill-row" data-pct="30">
+      <div class="skill-top"><span>Python</span><span>30%</span></div>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-row" data-pct="15">
+      <div class="skill-top"><span>HTML</span><span>15%</span></div>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+    </div>
+    <div class="skill-row" data-pct="15">
+      <div class="skill-top"><span>C#</span><span>15%</span></div>
+      <div class="progress-bar"><div class="progress-fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="fade-in">
+  <h2 class="section-title">Контакты</h2>
+  <p>Есть вопрос или идея? Пиши в Telegram.</p>
+  <a href="https://t.me/nihaohuh" target="_blank" class="btn btn-primary">Написать в Telegram</a>
+</section>
+
+<div style="height:3rem"></div>
+
+<div class="contact-bar">
+  <span>Связаться со мной:</span>
+  <a href="https://t.me/nihaohuh" target="_blank" class="tg-btn">
+    <svg class="tg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+    </svg>
+    @nihaohuh
+  </a>
+</div>
+
+<script>
+  document.getElementById('skillsGrid').querySelectorAll('.skill-row').forEach(row => {
+    row.querySelector('.progress-fill').style.width = row.dataset.pct + '%';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background: #0a0a0f;
+  color: #ddd;
+}
+
+nav {
+  background: #110d1f;
+  border-bottom: 2px solid #5b21b6;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #a78bfa;
+  letter-spacing: 2px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: .95rem;
+}
+.nav-links a:hover {
+  color: #a78bfa;
+  text-decoration: underline;
+}
+
+/* HERO */
+#hero {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  background: #0a0a0f;
+  border-bottom: 1px solid #2e1a5e;
+}
+#hero h1 {
+  font-size: 3.5rem;
+  color: #a78bfa;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+#hero p {
+  color: #999;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto .5rem;
+}
+.hero-btns {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  padding: .6rem 1.6rem;
+  border-radius: 6px;
+  font-size: .9rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+}
+.btn-primary { background: #5b21b6; color: #fff; border: none; }
+.btn-primary:hover { background: #4c1d95; }
+.btn-ghost { background: transparent; color: #a78bfa; border: 1px solid #5b21b6; }
+.btn-ghost:hover { background: #1e1040; }
+
+/* BIO */
+#bio {
+  padding: 2.5rem 2rem 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.bio-box {
+  background: #110d1f;
+  border: 1px solid #3b1d82;
+  border-left: 4px solid #7c3aed;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+.bio-box .label {
+  font-size: .75rem;
+  color: #7c3aed;
+  letter-spacing: .2em;
+  margin-bottom: .6rem;
+  font-family: monospace;
+}
+.bio-box p {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: .95rem;
+}
+
+/* SECTIONS */
+section { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
+.section-title {
+  font-size: 1.4rem;
+  color: #a78bfa;
+  border-bottom: 1px solid #3b1d82;
+  padding-bottom: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ABOUT */
+#about { border-bottom: 1px solid #1e1040; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.about-text p { color: #aaa; line-height: 1.8; margin-bottom: .8rem; font-size: .95rem; }
+.about-card {
+  background: #110d1f;
+  border: 1px solid #3b1d82;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+.stat { margin-bottom: 1.2rem; }
+.stat-label { font-size: .75rem; color: #666; margin-bottom: .3rem; letter-spacing: .05em; text-transform: uppercase; }
+.stat-value { font-size: 1.1rem; color: #c4b5fd; font-weight: 700; }
+
+/* SKILLS */
+#skills { border-bottom: 1px solid #1e1040; }
+.skills-list { display: flex; flex-direction: column; gap: 1.2rem; }
+.skill-row { }
+.skill-top { display: flex; justify-content: space-between; margin-bottom: .4rem; font-size: .9rem; color: #ccc; }
+.progress-bar { height: 8px; background: #1e1040; border-radius: 4px; overflow: hidden; }
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4c1d95, #a78bfa);
+  border-radius: 4px;
+}
+
+/* CONTACT */
+#contact { text-align: center; }
+#contact p { color: #999; margin-bottom: 1.5rem; }
+
+/* BOTTOM BAR */
+.contact-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #110d1f;
+  border-top: 1px solid #3b1d82;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: .65rem 2rem;
+  z-index: 200;
+}
+.contact-bar span { font-size: .8rem; color: #777; }
+.tg-btn {
+  display: flex; align-items: center; gap: .5rem;
+  background: #1e1040; border: 1px solid #5b21b6;
+  border-radius: 6px; padding: .4rem 1rem;
+  color: #a78bfa; text-decoration: none; font-size: .85rem; font-weight: 700;
+}
+.tg-btn:hover { background: #2e1a5e; }
+.tg-icon { width: 18px; height: 18px; fill: #a78bfa; }
+
+.fade-in { opacity: 1; }
+
+@media(max-width:600px) {
+  .about-grid { grid-template-columns: 1fr; }
+  #hero h1 { font-size: 2.5rem; }
+}
