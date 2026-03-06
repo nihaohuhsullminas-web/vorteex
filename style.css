@@ -1,54 +1,58 @@
+/* ПОДКЛЮЧЕНИЕ ШРИФТА */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* СБРОС СТАНДАРТНЫХ ОТСТУПОВ */
 * { margin:0; padding:0; box-sizing:border-box; }
 
+/* ОБЩИЕ СТИЛИ ДЛЯ BODY */
 body {
-  font-family: Roboto, Arial, sans-serif;
-  background: #0a0a0f;
-  color: #ddd;
+  font-family: Roboto, Arial, sans-serif; /* шрифт сайта */
+  background: #0a0a0f; /* тёмный фон */
+  color: #ddd; /* цвет текста по умолчанию */
 }
 
+/* НАВИГАЦИЯ */
 nav {
-  background: #110d1f;
-  border-bottom: 2px solid #5b21b6;
-  padding: 1rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
+  background: #110d1f; /* цвет фона меню */
+  border-bottom: 2px solid #5b21b6; /* нижняя граница меню */
+  padding: 1rem 2rem; /* внутренние отступы сверху/снизу и слева/справа */
+  display: flex; /* flex для выравнивания логотипа и ссылок */
+  align-items: center; /* по вертикали */
+  justify-content: space-between; /* логотип слева, ссылки справа */
+  position: sticky; /* меню остаётся сверху при скролле */
   top: 0;
-  z-index: 100;
+  z-index: 100; /* поверх других элементов */
 }
 .nav-logo {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #a78bfa;
-  letter-spacing: 2px;
+  color: #a78bfa; /* цвет логотипа */
+  letter-spacing: 2px; /* межбуквенный интервал */
 }
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  list-style: none; /* убираем точки у списка */
+  display: flex; /* горизонтальный список */
+  gap: 1.5rem; /* расстояние между ссылками */
 }
 .nav-links a {
   color: #bbb;
-  text-decoration: none;
+  text-decoration: none; /* убираем подчёркивание */
   font-size: .95rem;
 }
 .nav-links a:hover {
-  color: #a78bfa;
+  color: #a78bfa; /* цвет при наведении */
   text-decoration: underline;
 }
 
-/* HERO */
+/* ГЛАВНЫЙ ЭКРАН (HERO) */
 #hero {
-  text-align: center;
-  padding: 5rem 2rem 4rem;
+  text-align: center; /* центр текста */
+  padding: 5rem 2rem 4rem; /* верх, боковые, низ */
   background: #0a0a0f;
-  border-bottom: 1px solid #2e1a5e;
+  border-bottom: 1px solid #2e1a5e; /* отделение от следующей секции */
 }
 #hero h1 {
-  font-size: 3.5rem;
+  font-size: 3.5rem; /* большой заголовок */
   color: #a78bfa;
   letter-spacing: 4px;
   margin-bottom: 1rem;
@@ -56,21 +60,23 @@ nav {
 #hero p {
   color: #999;
   font-size: 1rem;
-  line-height: 1.7;
-  max-width: 500px;
-  margin: 0 auto .5rem;
+  line-height: 1.7; /* межстрочный интервал */
+  max-width: 500px; /* ограничение ширины */
+  margin: 0 auto .5rem; /* центрирование текста */
 }
 .hero-btns {
   margin-top: 2rem;
-  display: flex;
+  display: flex; /* кнопки рядом */
   gap: 1rem;
   justify-content: center;
 }
+
+/* КНОПКИ */
 .btn {
-  padding: .6rem 1.6rem;
-  border-radius: 6px;
+  padding: .6rem 1.6rem; /* внутренние отступы */
+  border-radius: 6px; /* скругление углов */
   font-size: .9rem;
-  cursor: pointer;
+  cursor: pointer; /* курсор при наведении */
   text-decoration: none;
   font-weight: 700;
 }
@@ -79,16 +85,16 @@ nav {
 .btn-ghost { background: transparent; color: #a78bfa; border: 1px solid #5b21b6; }
 .btn-ghost:hover { background: #1e1040; }
 
-/* BIO */
+/* БИОГРАФИЯ */
 #bio {
   padding: 2.5rem 2rem 0;
   max-width: 860px;
-  margin: 0 auto;
+  margin: 0 auto; /* центрирование блока */
 }
 .bio-box {
   background: #110d1f;
   border: 1px solid #3b1d82;
-  border-left: 4px solid #7c3aed;
+  border-left: 4px solid #7c3aed; /* цветная полоска слева */
   border-radius: 8px;
   padding: 1.5rem 2rem;
 }
@@ -97,7 +103,7 @@ nav {
   color: #7c3aed;
   letter-spacing: .2em;
   margin-bottom: .6rem;
-  font-family: monospace;
+  font-family: monospace; /* чтобы выглядело как код */
 }
 .bio-box p {
   color: #ccc;
@@ -105,7 +111,7 @@ nav {
   font-size: .95rem;
 }
 
-/* SECTIONS */
+/* СЕКЦИИ */
 section { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
 .section-title {
   font-size: 1.4rem;
@@ -117,7 +123,7 @@ section { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
 
 /* ABOUT */
 #about { border-bottom: 1px solid #1e1040; }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; } /* 2 колонки */
 .about-text p { color: #aaa; line-height: 1.8; margin-bottom: .8rem; font-size: .95rem; }
 .about-card {
   background: #110d1f;
@@ -129,31 +135,28 @@ section { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
 .stat-label { font-size: .75rem; color: #666; margin-bottom: .3rem; letter-spacing: .05em; text-transform: uppercase; }
 .stat-value { font-size: 1.1rem; color: #c4b5fd; font-weight: 700; }
 
-/* SKILLS */
+/* НАВЫКИ */
 #skills { border-bottom: 1px solid #1e1040; }
-.skills-list { display: flex; flex-direction: column; gap: 1.2rem; }
-.skill-row { }
-.skill-top { display: flex; justify-content: space-between; margin-bottom: .4rem; font-size: .9rem; color: #ccc; }
+.skills-list { display: flex; flex-direction: column; gap: 1.2rem; } /* вертикальный список */
+.skill-top { display: flex; justify-content: space-between; margin-bottom: .4rem; font-size: .9rem; color: #ccc; } /* название и процент рядом */
 .progress-bar { height: 8px; background: #1e1040; border-radius: 4px; overflow: hidden; }
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #4c1d95, #a78bfa);
+  background: linear-gradient(90deg, #4c1d95, #a78bfa); /* градиент полоски */
   border-radius: 4px;
 }
 
-/* CONTACT */
+/* КОНТАКТЫ */
 #contact { text-align: center; }
 #contact p { color: #999; margin-bottom: 1.5rem; }
 
-/* BOTTOM BAR */
+/* НИЖНЯЯ ПАНЕЛЬ */
 .contact-bar {
-  position: fixed;
+  position: fixed; /* всегда внизу */
   bottom: 0; left: 0; right: 0;
   background: #110d1f;
   border-top: 1px solid #3b1d82;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   gap: 1rem;
   padding: .65rem 2rem;
   z-index: 200;
@@ -168,9 +171,11 @@ section { padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
 .tg-btn:hover { background: #2e1a5e; }
 .tg-icon { width: 18px; height: 18px; fill: #a78bfa; }
 
+/* АНИМАЦИЯ ПОЯВЛЕНИЯ */
 .fade-in { opacity: 1; }
 
+/* АДАПТИВ */
 @media(max-width:600px) {
-  .about-grid { grid-template-columns: 1fr; }
-  #hero h1 { font-size: 2.5rem; }
+  .about-grid { grid-template-columns: 1fr; } /* одна колонка на телефонах */
+  #hero h1 { font-size: 2.5rem; } /* уменьшаем заголовок */
 }
